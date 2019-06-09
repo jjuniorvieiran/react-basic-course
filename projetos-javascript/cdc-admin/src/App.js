@@ -11,7 +11,7 @@ class App extends Component {
   }
 
   //we could put this code on constructor but wouldnt be a good practice. It is much better respect life cycle of instancialization
-  componentWillMount() {
+  componentDidMount() {
     $.ajax({
       url: "http://localhost:8080/api/autores",
       dataType: 'json',
@@ -78,8 +78,8 @@ class App extends Component {
                 <tbody>
                   {
                     this.state.lista.map(function (autor) {
-                      return (
-                        <tr>
+                      return (  
+                        <tr key={autor.id}> 
                           <td>{autor.nome}</td>
                           <td>{autor.email}</td>
                         </tr>

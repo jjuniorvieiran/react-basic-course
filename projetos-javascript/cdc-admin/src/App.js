@@ -35,15 +35,14 @@ class App extends Component {
       dataType: 'json',
       type: 'post',
       data: JSON.stringify({ nome: this.state.nome, email: this.state.email, senha: this.state.senha }),
-      success: function (resposta) {
+      success: function(resposta){
         console.log("enviado com sucesso");
-      },
+        this.setState({lista:resposta}); // to reload the page, only think that we need to do is update setState 
+      }.bind(this), //this code means, the this is related to the class is not related to the jquery.
       error: function (resposta) {
         console.log("erro");
       }
     });
-
-
   }
 
   setNome(evento){

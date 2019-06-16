@@ -3,13 +3,20 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
-    "react-scripts": "3.0.1"
+    "react-scripts": "3.0.1",
+    "redux-devtools": "^3.5.0"
   },
   "dependencies": {
     "jquery": "^3.4.1",
     "pubsub-js": "^1.7.0",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "react-redux": "^7.1.0",
+    "react-router": "^5.0.1",
+    "react-router-dom": "^5.0.1",
+    "reducer-redux": "^1.2.1",
+    "reducers": "^3.0.0-alpha",
+    "redux": "^4.0.1"
   },
   "scripts": {
     "start": "react-scripts start",

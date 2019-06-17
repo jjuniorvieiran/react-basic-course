@@ -7,6 +7,7 @@ import { createBrowserHistory } from "history";
 import rootReducer from 'reducers/reducer.js';
 import App from './App'; 
 import AutorBox from "./Autor";
+import Home from './Home';
 
 
 const history = createBrowserHistory()
@@ -16,6 +17,7 @@ render(
     <Provider store={store}>
         <Router history={history}>
             <Route path='/' component={App} />
+            <Route exact path="/" component={Home}/>
             <Route path='/autor' component={AutorBox}/>
             <Route path='/livro' />
         </Router>

@@ -52,7 +52,7 @@ class FormularioAutor extends Component {
 
     render() {
         return (
-            <div className="pure-form pure-form-aligned">
+            <div className="pure-form pure-form-aligned" align="center">
                 <form className="pure-form pure-form-aligned" onSubmit={this.enviaForm} method="post">
                     <InputCustomizado id="nome" type="text" name="nome" value={this.state.nome} onChange={this.setNome} label="Nome" />
                     <InputCustomizado id="email" type="email" name="email" value={this.state.email} onChange={this.setEmail} label="Email" />
@@ -73,7 +73,7 @@ class TabelaAutores extends Component {
 
     render() {
         return (
-            <div>
+            <div align="center">
                 <table className="pure-table">
                     <thead>
                         <tr>
@@ -125,9 +125,13 @@ export default class AutorBox extends Component {
     render() {
         return (
             <div>
-                <FormularioAutor />
-                <TabelaAutores lista={this.state.lista} />
-
+                <div className="header">
+                    <h1>Bem-vindo ao sistema</h1>
+                </div>
+                <div className="content" id="content">
+                    <FormularioAutor />
+                    <TabelaAutores lista={this.state.lista} />
+                </div>
             </div>
         );
     }

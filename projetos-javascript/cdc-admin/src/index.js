@@ -8,6 +8,7 @@ import rootReducer from 'reducers/reducer.js';
 import App from './App'; 
 import AutorBox from "./Autor";
 import Home from './Home';
+import LivroBox from './Livro';
 
 
 const history = createBrowserHistory()
@@ -19,7 +20,7 @@ render(
             <Route path='/' component={App} />
             <Route exact path="/" component={Home}/>
             <Route path='/autor' component={AutorBox}/>
-            <Route path='/livro' />
+            <Route path='/livro' component={LivroBox}/>
         </Router>
     </Provider>,
     document.getElementById('root')
